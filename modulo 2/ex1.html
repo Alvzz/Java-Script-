@@ -1,0 +1,29 @@
+
+<html>
+
+<head>
+  <title>JAVA SCRIPT</title>
+</head>
+
+<body>
+  <button id="new">Novo quadrado</button>
+
+  <div id="boxs"></div>
+
+  <script>
+    var btnElement = document.getElementById('new');
+    var boxsElement = document.getElementById('boxs');
+
+    btnElement.onclick = function () {
+      var box = document.createElement('div');
+
+      box.style.width = '100px';
+      box.style.height = '100px';
+      box.style.backgroundColor = '#F00';
+
+      boxsElement.appendChild(box);
+    };
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,37 @@
+
+<html>
+
+    <head>
+      <title>JAVA SCRIPT</title>
+    </head>
+    
+    <body>
+        <ul></ul>
+        <input type='text' name='nome'>
+        <button onclick='adicionar()'>Adicionar</button>
+    
+      <script>
+        var nomes = ['Diego', 'Gabriel', 'Lucas'];
+        var listElement = document.querySelector('ul')
+        var inputElement = document.querySelector('input');
+
+        function add(text) {
+            var liElement = document.createElement('li');
+            var textElement = document.createTextNode(text);
+
+            liElement.appendChild(textElement);
+            listElement.appendChild(liElement);
+        }
+        function adicionar(){
+            add(inputElement.value);
+            inputElement.value = '';            
+        }
+
+        for (nome of nomes){
+            add(nome);
+        }
+      </script>
+    </body>
+    
+    </html>
+    
